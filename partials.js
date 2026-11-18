@@ -6,7 +6,7 @@
   if(!s)return;
   var part=s.getAttribute('data-part');
   /* Always load the current stylesheet: the version tag defeats stale browser/host caches. Bump it when shared.css changes. */
-  if(part==='header'){var l=document.createElement('link');l.rel='stylesheet';l.href='https://migovt.org/ag/shared.css?v=20261118';document.head.appendChild(l);}
+  if(part==='header'){var l=document.createElement('link');l.rel='stylesheet';l.href='https://migovt.org/ag/shared.css?v=20261118b';document.head.appendChild(l);}
 
   var HEADER=`<div class="banner" role="note"><div class="wrap"><i aria-hidden="true">!</i>
   <span><strong>This is not an official government website.</strong> This site is a simulated government interface and does not represent any real government body or authority.</span></div></div>

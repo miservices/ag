@@ -30,7 +30,7 @@ nav.main a:hover,nav.main a.cur{border-bottom-color:var(--gold);color:var(--navy
 nav.main a.cta{background:var(--gold);color:var(--black);border-radius:3px;border-bottom-color:transparent;margin-left:8px}
 nav.main a.cta:hover{background:var(--gold-d);color:var(--black)}
 .logo{height:62px;width:auto;flex-shrink:0}
-.f-brand .logo{height:84px;background:#fff;border-radius:50%;padding:8px}
+.f-brand .logo{height:84px}
 .menu-btn{display:none;background:var(--navy);color:#fff;border:0;font:inherit;font-weight:700;padding:9px 16px;border-radius:3px;cursor:pointer}
 .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px}
 .btn{display:inline-block;font:inherit;font-weight:700;font-size:16px;text-decoration:none;background:var(--gold);color:var(--black);border:2px solid var(--gold);border-radius:3px;padding:11px 24px;cursor:pointer}
@@ -112,7 +112,6 @@ nav.main ul.sub a:hover{background:var(--char2,#3b3c37);color:var(--gold);border
 }
 
 /* Logo sits on a white disc so the seal is readable on the charcoal header and footer */
-.logo{background:#fff;border-radius:50%;padding:5px}
 .f-brand b{color:var(--gold)}
 
 /* ===== Inner pages (shared by all section pages) ===== */
