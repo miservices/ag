@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opinions | Department of Attorney General</title>
+<link rel="icon" type="image/png" href="https://migovt.org/ag/images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://migovt.org/ag/shared.css">
+</head>
+<body>
+<script src="https://migovt.org/ag/partials.js" data-part="header"></script>
+
+<main id="main">
+<section class="ph"><div class="wrap"><div class="ph-in">
+  <div class="crumb"><a href="https://migovt.org/ag/">Department of Attorney General</a><i>/</i><a href="https://migovt.org/ag/legal/">Legal</a><i>/</i>Opinions</div>
+  <div class="eyebrow">Legal</div>
+  <h1>Opinions</h1>
+  <p class="lead">Formal opinions on questions of law, published by the Department.</p>
+</div></div></section>
+<div class="wrap"><div class="body">
+<div class="two"><div>
+ <div class="card"><h2>About opinions</h2>
+  <p>A formal opinion answers a question of law. Opinions are generally published by the Office of the Attorney General and the Office of the Solicitor General, and every now and then by the Criminal Trials Office alongside them.</p>
+  <h3>Requesting an opinion</h3>
+  <p>Public officials can ask the Office of the Attorney General for a formal opinion. Send your question to the Department and say which official or agency is asking.</p>
+  <p><a class="btn k" href="https://migovt.org/ag/contact/" style="background:var(--black);border-color:var(--black);color:#fff">Contact the Department</a></p></div>
+ <div class="card"><h2>Published opinions</h2>
+  <div class="tools"><label class="vh" for="q">Search opinions</label><input id="q" type="search" placeholder="Search by number, subject or requester"><label class="vh" for="by">Issued by</label><select id="by"><option value="">All offices</option><option>Office of the Attorney General</option><option>Office of the Solicitor General</option><option>Criminal Trials Office</option></select><span class="count" id="count"></span></div>
+  <div class="tblwrap"><table class="tbl"><thead><tr><th scope="col">Number</th><th scope="col">Date</th><th scope="col">Issued by</th><th scope="col">Subject</th></tr></thead><tbody id="rows"></tbody></table></div></div>
+ </div>
+ <aside class="side"><div class="box"><div class="stripe"></div><h3>In this section</h3><ul><li><a href="https://migovt.org/ag/legal/opinions/">Opinions</a></li><li><a href="https://migovt.org/ag/legal/litigation/">Litigation and representation</a></li><li><a href="https://migovt.org/ag/legal/foia/">FOIA requests</a></li><li><a href="https://migovt.org/ag/legal/resources/">Legal resources</a></li><li><a href="https://migovt.org/ag/legal/self-help/">Self-help</a></li></ul></div></aside></div>
+</div></div>
+</main>
+
+<script src="https://migovt.org/ag/partials.js" data-part="footer"></script>
+<script>
+const OPINIONS=[]; // Example: {number:"2026-001", date:"2026-11-18", by:"Office of the Attorney General", requester:"[Official]", subject:"[Question]", url:"https://migovt.org/ag/legal/opinions/2026-001/"}
+const q=document.getElementById('q'),by=document.getElementById('by'),rows=document.getElementById('rows'),count=document.getElementById('count');
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){
+  var t=q.value.trim().toLowerCase();
+  var list=OPINIONS.filter(function(o){return(!by.value||o.by===by.value)&&(!t||[o.number,o.subject,o.requester,o.date].join(' ').toLowerCase().indexOf(t)>-1)});
+  count.textContent=list.length+(list.length===1?' result':' results');
+  if(!list.length){rows.innerHTML='<tr><td colspan="4" class="empty">'+(OPINIONS.length?'Nothing matches your search.':'No opinions have been published yet.')+'</td></tr>';return}
+  rows.innerHTML=list.map(function(o){return'<tr><td>'+esc(o.number)+'</td><td>'+esc(o.date)+'</td><td>'+esc(o.by)+'</td><td>'+(o.url?'<a href="'+esc(o.url)+'">'+esc(o.subject)+'</a>':esc(o.subject))+'</td></tr>'}).join('');
+}
+q.addEventListener('input',render);by.addEventListener('change',render);render();
+</script>
+</body>
+</html>

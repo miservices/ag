@@ -18,7 +18,7 @@
       <ul>
         <li><a href="https://migovt.org/ag/">Home</a></li>
         <li><a href="https://migovt.org/ag/about/">About</a></li>
-        <li class="has-sub"><a href="https://migovt.org/ag/legal/">Legal</a><ul class="sub"><li><a href="https://migovt.org/ag/legal/opinions/">Opinions</a></li><li><a href="https://migovt.org/ag/legal/litigation/">Litigation and representation</a></li><li><a href="https://migovt.org/ag/legal/foia/">FOIA Requests</a></li><li><a href="https://migovt.org/ag/legal/resources/">Legal resources</a></li></ul></li>
+        <li class="has-sub"><a href="https://migovt.org/ag/legal/">Legal</a><ul class="sub"><li><a href="https://migovt.org/ag/legal/opinions/">Opinions</a></li><li><a href="https://migovt.org/ag/legal/litigation/">Litigation and representation</a></li><li><a href="https://migovt.org/ag/legal/foia/">FOIA Requests</a></li><li><a href="https://migovt.org/ag/legal/resources/">Legal resources</a></li><li><a href="https://migovt.org/ag/legal/self-help/">Self-help</a></li></ul></li>
         <li class="has-sub"><a href="https://migovt.org/ag/criminal/">Criminal</a><ul class="sub"><li><a href="https://migovt.org/ag/criminal/reports/">Reports</a></li><li><a href="https://migovt.org/ag/criminal/investigations/">Investigations</a></li></ul></li>
         <li class="has-sub"><a href="https://migovt.org/ag/corrections/">Corrections</a><ul class="sub"><li><a href="https://migovt.org/ag/corrections/inmates/">Inmate information and lookup</a></li><li><a href="https://migovt.org/ag/corrections/complaints/">Complaints</a></li><li><a href="https://migovt.org/ag/corrections/policies/">Policies</a></li></ul></li>
         <li><a href="https://migovt.org/ag/careers/">Careers</a></li>
@@ -45,7 +45,7 @@
   <div class="wrap">
     <div class="f-links">
       <div class="fc"><a class="hd" href="https://migovt.org/ag/about/">About</a><a href="https://migovt.org/ag/about/">About the Department</a><a href="https://migovt.org/ag/careers/">Careers</a><a href="https://migovt.org/ag/contact/">Contact</a><a href="https://migovt.org/ag/legal/foia/">FOIA requests</a></div>
-      <div class="fc"><a class="hd" href="https://migovt.org/ag/legal/">Legal</a><a href="https://migovt.org/ag/legal/opinions/">Opinions</a><a href="https://migovt.org/ag/legal/litigation/">Litigation and representation</a><a href="https://migovt.org/ag/legal/foia/">FOIA requests</a><a href="https://migovt.org/ag/legal/resources/">Legal resources</a></div>
+      <div class="fc"><a class="hd" href="https://migovt.org/ag/legal/">Legal</a><a href="https://migovt.org/ag/legal/opinions/">Opinions</a><a href="https://migovt.org/ag/legal/litigation/">Litigation and representation</a><a href="https://migovt.org/ag/legal/foia/">FOIA requests</a><a href="https://migovt.org/ag/legal/resources/">Legal resources</a><a href="https://migovt.org/ag/legal/self-help/">Self-help</a></div>
       <div class="fc"><a class="hd" href="https://migovt.org/ag/criminal/">Criminal</a><a href="https://migovt.org/ag/criminal/reports/">Reports</a><a href="https://migovt.org/ag/criminal/investigations/">Investigations</a><a href="https://migovt.org/ag/tips/">Submit a tip</a></div>
       <div class="fc"><a class="hd" href="https://migovt.org/ag/corrections/">Corrections</a><a href="https://migovt.org/ag/corrections/inmates/">Inmate lookup</a><a href="https://migovt.org/ag/corrections/complaints/">Complaints</a><a href="https://migovt.org/ag/corrections/policies/">Policies</a></div>
     </div>

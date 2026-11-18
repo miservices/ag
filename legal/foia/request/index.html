@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOIA Request | Department of Attorney General</title>
+<link rel="icon" type="image/png" href="https://migovt.org/ag/images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://migovt.org/ag/shared.css">
+</head>
+<body>
+<script src="https://migovt.org/ag/partials.js" data-part="header"></script>
+
+<main id="main">
+<section class="ph"><div class="wrap"><div class="ph-in">
+  <div class="crumb"><a href="https://migovt.org/ag/">Department of Attorney General</a><i>/</i><a href="https://migovt.org/ag/legal/">Legal</a><i>/</i><a href="https://migovt.org/ag/legal/foia/">FOIA requests</a><i>/</i>Request</div>
+  <div class="eyebrow">Public records</div>
+  <h1>Make a FOIA request</h1>
+  <p class="lead">Describe the records you want and the Department will look for them.</p>
+</div></div></section>
+<div class="wrap"><div class="body">
+<div class="two"><div>
+ <div class="card" id="box">
+  <form id="ff" novalidate>
+   <h2>FOIA request</h2><p style="color:var(--muted)">Fields marked with an asterisk are required.</p>
+   <div class="row2"><div class="f"><label for="name">Your name *</label><input id="name" type="text" autocomplete="name"></div><div class="f"><label for="reach">Email or Discord username *</label><input id="reach" type="text"></div></div>
+   <div class="f"><label for="org">Organization <span class="opt">(optional)</span></label><input id="org" type="text"></div>
+   <div class="f"><label for="office">Which office holds the records?</label><select id="office"><option>Not sure</option><option>Office of the Attorney General</option><option>Office of the Solicitor General</option><option>Criminal Trials Office</option><option>Bureau of Criminal Investigation</option><option>Bureau of Correctional Administration</option></select></div>
+   <div class="f"><label for="what">Records you are requesting *</label><textarea id="what"></textarea><div class="h">Describe the records as specifically as you can: the subject, people or case involved, and what kind of document it is.</div></div>
+   <div class="row2"><div class="f"><label for="from">Records from <span class="opt">(optional)</span></label><input id="from" type="date"></div><div class="f"><label for="to">Records to <span class="opt">(optional)</span></label><input id="to" type="date"></div></div>
+   <div class="f"><label for="fmt">Preferred format</label><select id="fmt"><option>Electronic copy</option><option>Paper copy</option><option>Inspect the records in person</option></select></div>
+   <div class="err" id="err" role="alert"></div>
+   <button class="go-btn" type="submit">Submit request</button>
+  </form>
+  <div class="done" id="done" tabindex="-1"><h2>Your request has been received</h2><p>Keep this reference number if you want to follow up.</p><div class="ref" id="ref"></div><p><a class="btn" href="https://migovt.org/ag/legal/foia/">Back to FOIA requests</a></p></div>
+ </div></div>
+ <aside class="side"><div class="box"><div class="stripe"></div><h3>Before you submit</h3><ul><li>Be specific about the records you want</li><li>Include dates if you know them</li><li>One request can cover several related records</li></ul></div><div class="box"><h3>In this section</h3><ul><li><a href="https://migovt.org/ag/legal/opinions/">Opinions</a></li><li><a href="https://migovt.org/ag/legal/litigation/">Litigation and representation</a></li><li><a href="https://migovt.org/ag/legal/foia/">FOIA requests</a></li><li><a href="https://migovt.org/ag/legal/resources/">Legal resources</a></li><li><a href="https://migovt.org/ag/legal/self-help/">Self-help</a></li></ul></div></aside></div>
+</div></div>
+</main>
+
+<script src="https://migovt.org/ag/partials.js" data-part="footer"></script>
+<script>
+document.getElementById('ff').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(id){return document.getElementById(id).value};
+  if(!v('name').trim()||!v('reach').trim()||!v('what').trim()){document.getElementById('err').textContent='Enter your name, a way to reach you, and the records you are requesting.';return}
+  document.getElementById('err').textContent='';
+  var request={name:v('name'),contact:v('reach'),organization:v('org'),office:v('office'),records:v('what'),from:v('from'),to:v('to'),format:v('fmt'),submittedAt:new Date().toISOString()};
+  // TODO: send `request` to your backend (for example a Firestore "foiaRequests" collection) before showing the confirmation.
+  document.getElementById('ref').textContent='FOIA-'+Math.random().toString(36).slice(2,8).toUpperCase();
+  document.getElementById('ff').style.display='none';
+  var d=document.getElementById('done');d.style.display='block';d.focus();
+});
+</script>
+</body>
+</html>
