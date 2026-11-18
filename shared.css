@@ -1,0 +1,112 @@
+/* Department of Attorney General: shared styles (header, nav, footer, buttons, base) */
+:root{
+  --gold:#fbb829; --gold-d:#d99a0f;
+  --navy:#2f302c; --blue:#2f302c; --blue-d:#161616; --teal:#2f302c;
+  --char:#2f302c; --black:#161616;
+  --paper:#f4f4f1; --white:#fff; --ink:#1b1b1b; --muted:#5a5c58; --line:#dcdcd6;
+  --head:'Source Serif 4',Georgia,serif; --ui:'Public Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ui);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:var(--blue)}
+a:hover{color:var(--blue-d)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #d99a0f;outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+svg{display:block}
+.banner{background:var(--black);color:#e6e6e0;font-size:14px;padding:7px 0}
+.banner .wrap{display:flex;gap:10px;align-items:flex-start}
+.banner i{font-style:normal;flex-shrink:0;width:18px;height:18px;border-radius:50%;background:var(--gold);color:var(--black);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.banner strong{color:#fff}
+header.top{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--navy)}
+.seal{width:56px;height:56px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--head);font-weight:700;font-size:20px;flex-shrink:0;margin:0 5px}
+.brand small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;line-height:1.2}
+.brand b{display:block;font-family:var(--head);font-size:22px;line-height:1.1;color:var(--navy)}
+nav.main ul{list-style:none;display:flex;gap:4px;align-items:center}
+nav.main a{display:block;white-space:nowrap;padding:10px 12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15.5px;border-bottom:3px solid transparent}
+nav.main a:hover,nav.main a.cur{border-bottom-color:var(--gold);color:var(--navy)}
+nav.main a.cta{background:var(--gold);color:var(--black);border-radius:3px;border-bottom-color:transparent;margin-left:8px}
+nav.main a.cta:hover{background:var(--gold-d);color:var(--black)}
+.logo{height:62px;width:auto;flex-shrink:0}
+.f-brand .logo{height:84px;background:#fff;border-radius:50%;padding:8px}
+.menu-btn{display:none;background:var(--navy);color:#fff;border:0;font:inherit;font-weight:700;padding:9px 16px;border-radius:3px;cursor:pointer}
+.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px}
+.btn{display:inline-block;font:inherit;font-weight:700;font-size:16px;text-decoration:none;background:var(--gold);color:var(--black);border:2px solid var(--gold);border-radius:3px;padding:11px 24px;cursor:pointer}
+.btn:hover{background:var(--gold-d);border-color:var(--gold-d);color:var(--black)}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--black)}
+footer{margin-top:72px;background:var(--black);color:#e8e8e2}
+.f-top{background:var(--char);border-top:5px solid var(--gold);padding:46px 0 42px}
+.f-brand{display:flex;justify-content:center;align-items:center;gap:18px;margin-bottom:38px;text-decoration:none;color:#fff}
+.f-brand .seal{width:68px;height:68px;font-size:24px}
+.f-brand small{display:block;font-size:17px;font-family:var(--head);letter-spacing:.02em;color:#fff;font-weight:600}
+.f-brand b{display:block;font-family:var(--head);font-size:34px;line-height:1.05;color:#fff}
+.f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.f-col{display:flex;gap:16px}
+.f-col svg{width:26px;height:26px;color:var(--gold);flex-shrink:0;margin-top:4px}
+.f-col a{color:#fff;display:block;font-size:18px;margin-bottom:6px}
+.f-col a:hover{color:var(--gold)}
+.f-col strong{display:block;font-size:19px;margin-bottom:4px}
+.f-col p{font-size:17px;color:#e8e8e2}
+.f-links{padding:44px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px 36px}
+.f-links a{color:#fff;font-size:17.5px;line-height:1.35}
+.f-links a:hover{color:var(--gold)}
+.f-links .q{color:var(--gold);font-weight:700;font-size:20px;line-height:1.4;margin-top:4px}
+.f-fine{border-top:1px solid #333;padding:18px 0 26px;font-size:14px;color:#a9a9a1}
+.top-btn{position:fixed;right:24px;bottom:24px;width:62px;height:62px;border-radius:50%;background:var(--teal);color:#fff;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;font:inherit;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .2s}
+.top-btn.show{opacity:1;pointer-events:auto}
+.top-btn svg{width:20px;height:20px}
+@media(max-width:1020px){
+  .f-links{grid-template-columns:1fr 1fr}
+  .f-cols{grid-template-columns:1fr}
+}
+@media(max-width:1180px){
+  .menu-btn{display:block}
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:4px solid var(--gold);box-shadow:0 12px 24px rgba(0,0,0,.12);padding:8px 24px 16px}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;align-items:stretch;gap:0}
+  nav.main a{padding:12px 0;border-bottom:1px solid var(--line)}
+  nav.main a.cta{margin:10px 0 0;text-align:center;border-radius:3px}
+}
+@media(max-width:640px){
+  .wrap{padding:0 20px}
+  .cards,.org,.f-links{grid-template-columns:1fr}
+  .brand b{font-size:20px}
+  .f-brand{flex-direction:column;text-align:center}
+}
+header.top{background:var(--char);border-bottom:4px solid var(--gold)}
+.brand small{color:#c9c9c2}
+.brand b{color:var(--gold)}
+nav.main a{color:#fff}
+nav.main a:hover,nav.main a.cur{color:var(--gold);border-bottom-color:var(--gold)}
+nav.main a.cta{color:var(--black)}
+nav.main a.cta:hover{color:var(--black)}
+.menu-btn{background:var(--gold);color:var(--black)}
+@media(max-width:1180px){
+  nav.main{background:var(--char)}
+  nav.main a{border-bottom-color:#4a4b45}
+  nav.main a.cta{border-bottom-color:transparent}
+}
+.f-links{padding:44px 0 26px}
+.f-links .fc{display:flex;flex-direction:column;gap:8px}
+.f-links .fc a{font-size:16.5px}
+.f-links .fc a.hd{color:var(--gold);font-weight:700;font-size:20px;margin-bottom:4px}
+.f-more{display:flex;flex-wrap:wrap;gap:10px 28px;border-top:1px solid #333;padding:22px 0 40px}
+.f-more a{color:#fff;font-size:15.5px}
+.f-more a:hover{color:var(--gold)}
+.f-more .q{color:var(--gold);font-weight:700;font-size:15.5px;margin-left:auto}
+.f-more .q a{color:#fff;font-weight:400}
+@media(max-width:640px){
+  .f-more .q{margin-left:0}
+}
+nav.main li{position:relative}
+nav.main ul.sub{display:none;position:absolute;left:0;top:100%;min-width:270px;flex-direction:column;align-items:stretch;gap:0;background:var(--char);border-top:3px solid var(--gold);box-shadow:0 14px 28px rgba(0,0,0,.28);padding:6px 0;z-index:60}
+nav.main li.has-sub:hover>ul.sub,nav.main li.has-sub:focus-within>ul.sub,nav.main li.has-sub.open>ul.sub{display:flex}
+nav.main ul.sub a{color:#fff;font-weight:500;font-size:15px;padding:11px 18px;white-space:normal;border-bottom:0}
+nav.main ul.sub a:hover{background:var(--char2,#3b3c37);color:var(--gold);border-bottom:0}
+@media(max-width:1180px){
+  nav.main ul.sub{display:flex;position:static;min-width:0;box-shadow:none;border-top:0;background:transparent;padding:0 0 0 16px}
+  nav.main ul.sub a{padding:10px 0;font-size:14.5px;border-bottom:1px solid #4a4b45}
+}
